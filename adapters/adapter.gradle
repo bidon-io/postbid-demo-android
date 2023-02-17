@@ -1,0 +1,44 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+apply from: "$rootProject.projectDir/base-build.gradle"
+
+ext {
+    adapterMinSdkVersion = 16
+    adapterNetworkVersionName = '1.0.0'
+    adapterVersionCode = 0
+}
+
+android {
+    defaultConfig {
+        consumerProguardFiles "consumer-rules.pro"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compileOnly project(":sdk")
+}
+
+afterEvaluate {
+    version = "${mediationVersionName}.${adapterVersionCode}"
+    android {
+        defaultConfig {
+            buildConfigField "String", "ADAPTER_NETWORK_VERSION_NAME", "\"${adapterNetworkVersionName}\""
+            buildConfigField "String", "ADAPTER_VERSION_NAME", "\"$version\""
+            buildConfigField "int", "ADAPTER_MIN_SDK_VERSION", "$adapterMinSdkVersion"
+        }
+    }
+    publishing {
+        publications {
+            "${project.name}"(MavenPublication) {
+                artifactId = "adapter.${project.name}"
+                from components.release
+            }
+        }
+    }
+}

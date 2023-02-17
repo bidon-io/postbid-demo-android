@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bInitialize"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_width="match_parent"
+        android:text="@string/initialize" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bOpenAutoRefreshActivity"
+        android:enabled="false"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_width="match_parent"
+        android:text="@string/open_auto_refresh_activity" />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bLoadBanner"
+            style="@style/Widget.MaterialComponents.Button"
+            android:enabled="false"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="@string/load_banner" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bShowBanner"
+            android:enabled="false"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="2dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="@string/show_banner" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bLoadInterstitial"
+            style="@style/Widget.MaterialComponents.Button"
+            android:enabled="false"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="@string/load_interstitial" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bShowInterstitial"
+            android:enabled="false"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="2dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="@string/show_interstitial" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bLoadRewarded"
+            android:enabled="false"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="@string/load_rewarded" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bShowRewarded"
+            android:enabled="false"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="2dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="@string/show_rewarded" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/adContainer"
+        android:layout_height="50dp"
+        android:layout_width="match_parent" />
+
+</LinearLayout>

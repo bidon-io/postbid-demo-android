@@ -1,0 +1,11 @@
+plugins {
+    id 'org.jetbrains.kotlin.android'
+}
+apply from: "../adapter.gradle"
+
+adapterNetworkVersionName = '11.7.1'
+adapterVersionCode = 0
+
+dependencies {
+    api "com.applovin:applovin-sdk:$adapterNetworkVersionName"
+}

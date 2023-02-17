@@ -1,0 +1,16 @@
+<resources>
+
+    <!-- BidMachine -->
+    <string name="bid_machine_source_id">5</string>
+
+    <!-- AdMob -->
+    <!-- Change admob_application_id on your application id-->
+    <string name="admob_application_id">ca-app-pub-3940256099942544~3347511713</string>
+
+    <!-- MAX -->
+    <string name="max_sdk_key">YOUR_MAX_SDK_KEY</string>
+    <string name="max_banner_ad_unit_id">YOUR_MAX_BANNER_AD_UNIT_ID</string>
+    <string name="max_interstitial_ad_unit_id">YOUR_MAX_INTERSTITIAL_AD_UNIT_ID</string>
+    <string name="max_rewarded_ad_unit_id">YOUR_MAX_REWARDED_AD_UNIT_ID</string>
+
+</resources>

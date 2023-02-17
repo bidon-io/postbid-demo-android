@@ -1,0 +1,19 @@
+<resources>
+
+    <string name="app_name">example</string>
+    <string name="initialize">Initialize</string>
+    <string name="open_auto_refresh_activity">Open Auto Refresh Activity</string>
+    <string name="load">Load</string>
+    <string name="show">Show</string>
+    <string name="hide">Hide</string>
+    <string name="stop_refresh">Stop Refresh</string>
+    <string name="start_refresh">Start Refresh</string>
+    <string name="destroy">Destroy</string>
+    <string name="load_banner">Load Banner</string>
+    <string name="show_banner">Show Banner</string>
+    <string name="load_interstitial">Load Interstitial</string>
+    <string name="show_interstitial">Show Interstitial</string>
+    <string name="load_rewarded">Load Rewarded</string>
+    <string name="show_rewarded">Show Rewarded</string>
+
+</resources>

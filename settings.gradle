@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+}
+
+rootProject.name = "BidOn-Android-Mediation-SDK"
+
+include ':example',
+        ':sdk'
+
+file("adapters")
+        .listFiles()
+        .findAll { file ->
+            file.isDirectory() && !file.name.startsWith('_')
+        }
+        .forEach { folder ->
+            settings.include(":adapters:${folder.name}")
+        }

@@ -1,0 +1,3 @@
+package io.bidon.mediation.sdk.mediationad
+
+interface BannerMediationAdViewListener : ViewMediationAdListener<BannerMediationAdView>

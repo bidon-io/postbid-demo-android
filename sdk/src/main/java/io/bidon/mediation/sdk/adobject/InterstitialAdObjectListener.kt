@@ -1,0 +1,3 @@
+package io.bidon.mediation.sdk.adobject
+
+interface InterstitialAdObjectListener : FullscreenAdObjectListener<InterstitialAdObject>
