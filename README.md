@@ -67,12 +67,35 @@ First you need to select the maximum price from the previously downloaded ads. T
 3) Make a request with this ad unit.
 4) If this adUnit returned fill - it should be used in postbid auction
 
+```kotlin
+override fun load() {
+    lineItems.findLineItem(price)?.also { lineItem ->
+        InterstitialAd.load(context,
+                            lineItem.id,
+                            AdRequest.Builder().build(),
+                            LoadListener(listener))
+    }
+}
+```
+
 [*Example*](adapters/admob/src/main/java/io/bidon/mediation/adapter/admob/AdMobInterstitialAdObject.kt#L32)
 
 ### BidMachine
 
 1) Request with price
 2) If this adUnit returned fill - it should be used in postbid auction
+
+```kotlin
+override fun load() {
+    val request = InterstitialRequest.Builder()
+            .setPriceFloorParams(PriceFloorParams().addPriceFloor(price))
+            .build()
+    interstitialAd = InterstitialAd(context).apply {
+        setListener(Listener(listener))
+        load(request)
+    }
+}
+```
 
 [*Example*](adapters/bidmachine/src/main/java/io/bidon/mediation/adapter/bidmachine/BidMachineInterstitialAdObject.kt#L20)
 
