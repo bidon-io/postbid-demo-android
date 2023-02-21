@@ -1,5 +1,3 @@
-# BidOn Android Mediation Sdk
-
 * [Overview](#overview)
 * [Working with networks](#working-with-networks)
   * [Get network CPM](#get-network-cpm)
